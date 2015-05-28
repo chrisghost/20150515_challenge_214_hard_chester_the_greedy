@@ -36,6 +36,13 @@ object Main extends App {
   println("100k points", time{rec(start, getPts("input100000"), Nil).reduce(_+_)})
 }
 
+object Tree {
+  var elements: Map[Point, List[Point]]
+
+  def rnd(d: Double): Double = BigDecimal(d).setScale(2).doubleValue
+  def getRegion(p: Point): Point = 
+}
+
 case class Point(x: Double, y: Double) {
   def dst(b: Point) = scala.math.sqrt(scala.math.pow(x-b.x, 2) + scala.math.pow(y-b.y, 2))
   def closest(pts: Seq[Point]) = {
